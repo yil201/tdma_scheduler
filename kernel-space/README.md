@@ -1,5 +1,9 @@
 This is a Linux kernel module that intercepts outgoing TCP packets and sends them out immediately.
 
+Prerequisite:
+1. Linux kernel headers and build tools are installed using `sudo apt-get install linux-headers-$(uname -r) build-essential`
+
+
 Build instructions:
 1. Clone the repository to your local machine.
 2. Navigate to the directory containing the source code and the Makefile.
