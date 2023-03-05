@@ -6,7 +6,7 @@
 #include <linux/ip.h>
 #include <linux/tcp.h>
 
-static struct nf_hook_ops nfho; // netfilter hook function to intercept incoming packets
+static struct nf_hook_ops nfho; // netfilter hook function to intercept outgoing packets
 
 unsigned int hook_func(void *priv, struct sk_buff *skb, const struct nf_hook_state *state)
 {
@@ -34,7 +34,7 @@ static int __init init_hook(void)
 {
     // netfilter hook init
     nfho.hook = hook_func;                  
-    nfho.hooknum = NF_INET_LOCAL_IN;        
+    nfho.hooknum = NF_INET_LOCAL_OUT;        
     nfho.pf = PF_INET;                      
     nfho.priority = NF_IP_PRI_FIRST;        
 
