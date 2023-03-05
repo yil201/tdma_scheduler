@@ -3,7 +3,7 @@
 This is a Linux kernel module that intercepts outgoing TCP packets and sends them out immediately, without waiting for the network stack to buffer them.
 
 ## Prerequisite:
-1. Linux kernel headers and build tools are installed using `sudo apt-get install linux-headers-$(uname -r) build-essential`
+1. Linux kernel headers and build tools are installed using: `sudo apt-get install linux-headers-$(uname -r) build-essential`
 
 ## Build instructions:
 1. Clone the repository to your local machine.
